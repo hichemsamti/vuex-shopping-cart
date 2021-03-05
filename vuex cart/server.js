@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser=require('body-Parser')
 const mongoose=require('mongoose')
-
+//mongodb+srv://hichem:<password>@cluster0.vo1cj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 mongoose.connect('mongodb+srv://hichem:1-hichemmarwa@cluster0.vo1cj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{ useNewUrlParser: true,useUnifiedTopology: true });
 //'mongodb://localhost/test'
 var db = mongoose.connection;
