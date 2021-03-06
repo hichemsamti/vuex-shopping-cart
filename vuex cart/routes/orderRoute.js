@@ -7,18 +7,19 @@ const Order=require("../models/order.js")
 //const Product=require("../models/product.js")
 
 router.post('/',(req,res)=>{
+    console.log(req.body)
     const orderItems=[]
     const cart=req.body.orderItems
     cart.forEach((element=>{orderItems.push(element.id)}))
-    Order= new Menu({
+    order= new Order ({
        orderItems:orderItems,
-       price:req.body.price
+       total:req.body.total
 
     
 
     })
-    Order.save(()=>{
-        res.json(Order)
+    order.save(()=>{
+        res.json(order)
      })
 })
 
